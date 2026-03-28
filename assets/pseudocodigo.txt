@@ -1,0 +1,109 @@
+INÍCIO
+
+FUNÇÃO gerar_telemetria
+    iv ← número aleatório entre 18 e 35
+    ev ← número aleatório entre -15 e 30
+    si ← 0 ou 1 aleatório
+    tp ← número aleatório entre 95 e 145
+    cm ← 0 ou 1 aleatório
+
+    dados_telemetria ← {
+        internal_temp: iv
+        external_temp: ev
+        structural_integrity: si
+        tank_pressure: tp
+        critical_modules: cm
+    }
+
+    SE iv entre 21 e 30 ENTÃO status_iv ← "[ OK ]" SENÃO "**FALHOU**"
+    SE ev entre -5 e 30 ENTÃO status_ev ← "[ OK ]" SENÃO "**FALHOU**"
+    SE si = 1 ENTÃO status_si ← "[ OK ]" SENÃO "**FALHOU**"
+    SE tp entre 95 e 145 ENTÃO status_tp ← "[ OK ]" SENÃO "**FALHOU**"
+    SE cm = 1 ENTÃO status_cm ← "[ OK ]" SENÃO "**FALHOU**"
+
+    status_telemetria ← {
+        internal_temp: status_iv
+        external_temp: status_ev
+        structural_integrity: status_si
+        tank_pressure: status_tp
+        critical_modules: status_cm
+    }
+
+    RETORNAR dados_telemetria, status_telemetria
+FIM_FUNÇÃO
+
+
+FUNÇÃO calcular_autonomia
+    capacidade_total ← aleatório entre 800 e 1200
+    carga_percent ← aleatório entre 60 e 100
+    consumo_decolagem ← aleatório entre 15 e 30
+    perda_percent ← aleatório entre 1 e 7
+
+    energia_disponivel ← capacidade_total * (carga_percent / 100)
+    perda ← energia_disponivel * (perda_percent / 100)
+    energia_util ← energia_disponivel - perda
+
+    autonomia_meses ← aleatório entre 3 e 15
+    autonomia_horas ← autonomia_meses * 30 * 24
+
+    dados_autonomia ← {
+        capacidade_total
+        energia_disponivel
+        carga_percent
+        consumo_decolagem
+        perda_percent
+        energia_util
+        autonomia_meses
+        autonomia_horas
+    }
+
+    SE carga_percent ≥ 80 ENTÃO status_bateria ← "[ OK ]" SENÃO "INSUFICIENTE"
+    SE energia_util ≥ 10 ENTÃO status_energia ← "[ OK ]" SENÃO "INSUFICIENTE"
+    SE perda_percent ≤ 5 ENTÃO status_perda ← "[ OK ]" SENÃO "CRITICA"
+    SE autonomia_meses ≥ 10 ENTÃO status_autonomia ← "[ OK ]" SENÃO "INSUFICIENTE"
+
+    status_autonomia ← {
+        Bateria: status_bateria
+        Energia: status_energia
+        Perda: status_perda
+        Autonomia: status_autonomia
+    }
+
+    RETORNAR dados_autonomia, status_autonomia
+FIM_FUNÇÃO
+
+
+# --- Execução principal ---
+
+dados_autonomia, status_autonomia ← calcular_autonomia()
+dados_telemetria, status_telemetria ← gerar_telemetria()
+
+# Decisão final
+todos_status ← juntar status_autonomia e status_telemetria
+
+SE TODOS os valores de todos_status forem "[ OK ]" ENTÃO
+    decisao ← "PRONTO PARA DECOLAR"
+SENÃO
+    decisao ← "DECOLAGEM ABORTADA"
+FIM_SE
+
+# Saída
+EXIBIR "Iniciando Projeto Aurora-Siger"
+AGUARDAR entrada do usuário
+
+EXIBIR "Calculando autonomia..."
+EXIBIR quantidade aleatória de cálculos
+AGUARDAR entrada
+
+EXIBIR "Gerando telemetria..."
+EXIBIR quantidade aleatória de registros
+AGUARDAR entrada
+
+EXIBIR dados de autonomia
+EXIBIR dados de telemetria
+EXIBIR status de autonomia
+EXIBIR status de telemetria
+
+EXIBIR "Decisão de lançamento: ", decisao
+
+FIM
