@@ -14,7 +14,9 @@ Sistema de simulação de verificação pré-lançamento que gera dados aleatór
 
 - Prints(1)(2).png - Prints da execução do código em python
 
-- Analise-IA-AuroraSiger.pdf - Analise em PDF solicitada a IA contendo, classificação, identificação de dados e anomalias e riscos do projeto
+- AuroraSiger-Analise-IA.pdf - Analise em PDF solicitada a IA contendo, classificação, identificação de dados e anomalias e riscos do projeto
+
+- AuroraSiger-CodigoPython.pdf - PDF do codigo python completo do projeto
 
 - Reflexaocritica.txt - Uma reflexao critica em TXT acerca dos benefícios e tecnologias geradas pelo projeto 
 
