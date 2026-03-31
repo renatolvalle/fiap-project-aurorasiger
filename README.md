@@ -4,7 +4,7 @@ Sistema de simulação de verificação pré-lançamento que gera dados aleatór
 
 ---
 
-## Arquivos e descrição desse repositório
+## Arquivos da pasta "assets" e descrição desse repositório
 
 - prompt_relatorio_aurora_siger.txt - Prompt utilizado para criar o PDF de relatório e analise assistida por IA
 
