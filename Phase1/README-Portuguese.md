@@ -1,4 +1,4 @@
-# Projeto Aurora-Siger
+# Projeto Aurora-Siger - Versão em português
 
 Sistema de simulação de verificação pré-lançamento que gera dados aleatórios de telemetria e autonomia energética, avalia cada parâmetro contra limiares operacionais e emite uma decisão de lançamento automatizada.
 
@@ -6,21 +6,26 @@ Sistema de simulação de verificação pré-lançamento que gera dados aleatór
 
 ## Arquivos e descrição desse repositório
 
-- prompt_relatorio_aurora_siger.txt - Prompt utilizado para criar o PDF de relatório e analise assistida por IA
+### `assets/docs`
 
-- fluxograma.png - Imagem do fluxograma exigido pelo avaliador
+aurora_siger_report_prompt.txt – Prompt utilizado para gerar o relatório de análise assistido por IA 
+AuroraSiger-AI-Analysis.pdf – Análise gerada por IA incluindo classificação, identificação de dados, anomalias e riscos do projeto
+AuroraSiger-PythonCode.pdf – Código Python completo em formato PDF
+CriticalReflection.txt – Reflexão crítica sobre os benefícios e tecnologias gerados pelo projeto
+pseudocode.txt – Pseudocódigo exigido pelo avaliador
 
-- pseudocodigo.txt - Txt contendo o código em pseudocodigo exigido pelo avaliador
+### `assets/images`
 
-- Prints(1)(2).png - Prints da execução do código em python
+Flowchart.png – Imagem do fluxograma exigido
+Screenshot1.png – Captura de tela da saída de execução
+Screenshot2.png – Captura de tela da saída de execução
 
-- AuroraSiger-Analise-IA.pdf - Analise em PDF solicitada a IA contendo, classificação, identificação de dados e anomalias e riscos do projeto
+### `Arquivos raiz`
 
-- AuroraSiger-CodigoPython.pdf - PDF do codigo python completo do projeto
-
-- Reflexaocritica.txt - Uma reflexao critica em TXT acerca dos benefícios e tecnologias geradas pelo projeto 
-
-
+FIAP_Aurora_Siger_Project_English.ipynb – Versão em notebook do projeto - Inglês
+FIAP_Aurora_Siger_Project_Portuguese.ipynb – Versão em notebook do projeto - Português
+[README-Portuguese.md](http://README-Portuguese.md) – Versão em português do README
+[README-English.md](http://README-English.md) – Versão em inglês do README
 
 ## Sumário do projeto
 
@@ -53,7 +58,7 @@ O Aurora-Siger simula o ciclo completo de verificação pré-lançamento de uma 
 ## Estrutura do Código
 
 ```
-aurora_siger.py
+FIAP_Aurora_Siger_Project.ipynb
 ├── gerar_telemetria() - Gera e avalia os parâmetros de telemetria
 ├── calcular_autonomia() - Gera e avalia os parâmetros energéticos
 └── Programa principal  - Chama as funções, decide e exibe os resultados
@@ -110,7 +115,7 @@ decisao = 'PRONTO PARA DECOLAR' if all(
 Nenhuma dependência externa é necessária. Apenas Python 3.6 ou superior.
 
 ```bash
-python aurora_siger.py
+python FIAP_Aurora_Siger_Project_Portuguese.ipynb
 ```
 
 O programa solicita confirmações do usuário via `Enter` entre cada etapa, simulando um fluxo de verificação interativo.
@@ -124,5 +129,5 @@ O programa solicita confirmações do usuário via `Enter` entre cada etapa, sim
 - Módulo `random` (biblioteca padrão — nenhuma instalação necessária)
 
 ## Prints da execução
-![Print1](./assets/Prints1.png)
-![Print2](./assets/Prints2.png)
+![Screenshot1](./assets/images/Screenshot1.png)  
+![Screenshot2](./assets/images/Screenshot2.png)  
