@@ -24,10 +24,10 @@ Screenshot2.png – Captura de tela da saída de execução
 
 ### `Arquivos raiz`
 
-FIAP_Aurora_Siger_Project_English.ipynb – Versão em notebook do projeto - Inglês
-FIAP_Aurora_Siger_Project_Portuguese.ipynb – Versão em notebook do projeto - Português
-[README.md](http://README.md) – Versão em português do README
-[README-English.md](http://README-English.md) – Versão em inglês do README
+- FIAP_Aurora_Siger_Project_English.ipynb – Versão em notebook do projeto - Inglês
+- FIAP_Aurora_Siger_Project_Portuguese.ipynb – Versão em notebook do projeto - Português
+- README.md – Versão em português do README
+- [README-English.md](./README-English.md) – Versão em inglês do README
 
 ## Sumário do projeto
 
@@ -131,10 +131,8 @@ O programa solicita confirmações do usuário via `Enter` entre cada etapa, sim
 - Módulo `random` (biblioteca padrão — nenhuma instalação necessária)
 
 ## Prints da execução
-<<<<<<< HEAD:Phase1/README-Portuguese.md
+
 ![Screenshot1](./assets/images/Screenshot1.png)  
 ![Screenshot2](./assets/images/Screenshot2.png)  
-=======
-![Print1](./assets/Prints1.png)
-![Print2](./assets/Prints2.png)
->>>>>>> 542636b0bc255b1be8bfe25b03b8a65692e6637f:README.md
+
+

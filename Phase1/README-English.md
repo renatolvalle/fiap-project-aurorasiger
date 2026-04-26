@@ -1,5 +1,6 @@
 
-Before reading: This is a project developed for a Data Science degree at FIAP College(Brazil) for educational purposes. All assets are in Portuguese. Only this README and the file FIAP_Aurora_Siger_Project_English.ipynb are in English.
+Before reading: This is a project developed for a Data Science degree at FIAP College(Brazil) for educational purposes. 
+All assets are in Portuguese. Only this README and the file FIAP_Aurora_Siger_Project_English.ipynb are in English.
 
 
 # Aurora-Siger Project - English Version
@@ -28,8 +29,8 @@ Pre-launch verification simulation system that generates random telemetry and en
 
 - `FIAP_Aurora_Siger_Project_English.ipynb` – Notebook version of the project - English 
 - `FIAP_Aurora_Siger_Project_Portuguese.ipynb` – Notebook version of the project - Portuguese
-[README.md](http://README.md) – README - Portuguese Version
-[README-English.md](http://README-English.md) – README - English Version
+- [README.md](./README.md) – README - Portuguese Version
+- README-English.md – README - English Version
 
 ---
 
